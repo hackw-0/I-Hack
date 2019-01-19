@@ -101,40 +101,43 @@ event.preventDefault();
 render() {
 return (
 <div>
-   /* <p>{this.state.builder}</p>
-    <p>{this.state.investor}</p>
-    <p>{this.state.buyer}</p>
-    <p>{this.state.avail}</p>
-*/
+<div class="App-header">
+  	<h1>Property Tokenization dApp</h1>
      <button onClick={this.onStartSubmit}>Start Selling property</button>
+     </div>
+     <hr />
     <div class="App-header">
     <h1>Investor</h1>
     
-    <p>the availble area is  "{this.state.avail}" sqft </p> 
+    <p>The availble area is  "{this.state.avail}" sqft </p> 
     <input value={this.state.investor_booking}
     onChange={event => this.setState({ investor_booking: event.target.value })}
     />
     <button onClick={this.investor_buy}>Buy</button>
-    <p>"{this.state.investor_booking}"</p>
-    <p>"{this.state.investor}"</p>
+ 
     </div>
     <hr />  
-
+<div class="App-header">
     <h1>Buyer</h1>
-    <p>400 sqft consist of one house.</p>
+    <p>400 Square Feet per Appartment</p>
+    <p>(Put in the room no. i.e in range 1 to 10 only)</p>
+
     <input
                 value={this.state.buyer_booking}
                 onChange={event => this.setState({ buyer_booking: event.target.value })}
                 />
                 
                 <button onClick={this.buyer_buy}> Buy </button>
-    <p>"{this.state.buyer_booking}"</p>
-    <p>"{this.state.buyer}"</p>
-    <hr />
+   
 
+    
+    </div>
+<hr />
+<div class="App-header">
 
     <p>Closing Selling</p>
                 <button onClick={this.onFinishSubmit}>Close Selling</button>
+</div>
                 
 </div>
 );
